@@ -1,0 +1,622 @@
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 min-w-80 bg-soft-white font-sans text-ink antialiased;
+  }
+
+  body,
+  button,
+  input {
+    font: inherit;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-coexistir-active;
+  }
+
+  ::selection {
+    @apply bg-sage-400 text-coexistir-900;
+  }
+
+  section {
+    @apply scroll-mt-24;
+  }
+}
+
+@layer components {
+  .page-shell,
+  #app {
+    @apply min-h-screen;
+  }
+
+  .site-main {
+    @apply overflow-hidden;
+  }
+
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-kicker {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-coexistir-500;
+  }
+
+  .site-header {
+    @apply sticky top-0 z-50 border-b border-white/10 bg-coexistir-900/90 text-white shadow-card backdrop-blur-xl;
+  }
+
+  .header-inner {
+    @apply relative mx-auto flex h-20 w-full max-w-7xl items-center gap-6 px-5 sm:px-8 lg:px-10;
+  }
+
+  .brand-lockup {
+    @apply flex h-14 max-w-[13rem] shrink-0 items-center gap-3 overflow-hidden sm:max-w-[17rem];
+  }
+
+  .brand-logo {
+    @apply size-11 max-h-11 max-w-11 shrink-0 rounded-xl object-cover;
+  }
+
+  .brand-copy {
+    @apply flex min-w-0 flex-col;
+  }
+
+  .brand-copy strong {
+    @apply truncate font-display text-xl font-normal leading-none text-white sm:text-2xl;
+  }
+
+  .brand-copy small {
+    @apply mt-1 hidden truncate text-[0.52rem] font-semibold uppercase tracking-[0.16em] text-sage-400 sm:block;
+  }
+
+  .side-nav {
+    @apply fixed inset-x-4 top-20 hidden flex-col gap-1 rounded-2xl border border-white/10 bg-coexistir-900/95 p-3 shadow-soft backdrop-blur-xl lg:static lg:ml-auto lg:flex lg:flex-row lg:items-center lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none;
+  }
+
+  .site-header.is-open .side-nav {
+    @apply flex;
+  }
+
+  .side-nav a {
+    @apply relative flex min-h-11 items-center bg-transparent px-4 text-sm font-medium text-white/80 transition duration-300 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-px after:origin-left after:scale-x-0 after:bg-white after:content-[''] hover:-translate-y-0.5 hover:bg-transparent hover:text-white hover:after:scale-x-100;
+  }
+
+  .header-cta {
+    @apply ml-auto hidden min-h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:bg-sage-100 md:inline-flex lg:ml-2;
+  }
+
+  .menu-toggle {
+    @apply ml-auto grid size-11 place-content-center gap-1.5 rounded-full border border-white/20 bg-white/10 lg:hidden;
+  }
+
+  .menu-toggle span {
+    @apply h-0.5 w-5 rounded-full bg-white transition;
+  }
+
+  .hero {
+    @apply bg-soft-white py-12 sm:py-16 lg:py-20;
+  }
+
+  .hero-inner {
+    @apply mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-10;
+  }
+
+  .hero-content {
+    @apply lg:col-span-6;
+  }
+
+  .hero-eyebrow {
+    @apply mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-coexistir-500;
+  }
+
+  .hero-eyebrow > span {
+    @apply h-2 w-2 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
+  }
+
+  .hero-content h1 {
+    @apply max-w-[12ch] font-display text-5xl leading-[0.98] tracking-[-0.035em] text-coexistir-900 sm:text-6xl lg:text-7xl;
+  }
+
+  .hero-description {
+    @apply mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg;
+  }
+
+  .hero-actions {
+    @apply mt-8 flex flex-col gap-3 sm:flex-row;
+  }
+
+  .button-primary,
+  .button-secondary {
+    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full px-6 text-sm font-semibold transition;
+  }
+
+  .button-primary {
+    @apply bg-coexistir-900 text-white shadow-soft hover:-translate-y-0.5 hover:bg-coexistir-700;
+  }
+
+  .button-secondary {
+    @apply border border-coexistir-900/20 bg-white text-coexistir-900 hover:border-coexistir-500 hover:bg-sage-100;
+  }
+
+  .hero-highlights {
+    @apply mt-9 grid list-none gap-3 p-0 text-sm text-coexistir-700 sm:grid-cols-3;
+  }
+
+  .hero-highlights li {
+    @apply flex items-start gap-2 leading-5;
+  }
+
+  .hero-highlights li > span {
+    @apply mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-sage-100 text-[0.65rem] font-bold text-coexistir-900;
+  }
+
+  .hero-image-wrap {
+    @apply relative m-0 min-h-[30rem] overflow-hidden rounded-[2rem] bg-sage-100 shadow-soft sm:min-h-[38rem] lg:col-span-6;
+  }
+
+  .hero-image-wrap::before {
+    @apply pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-coexistir-900/25 via-transparent to-transparent content-[''];
+  }
+
+  .hero-image-wrap img {
+    @apply absolute inset-0 h-full w-full object-cover object-center;
+  }
+
+  .hero-image-wrap figcaption {
+    @apply absolute bottom-5 left-5 z-20 flex items-center gap-2 rounded-full border border-white/30 bg-white/90 px-4 py-2.5 text-xs font-semibold text-coexistir-900 shadow-card backdrop-blur;
+  }
+
+  .status-dot {
+    @apply size-2 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
+  }
+
+  .about-section {
+    @apply bg-white py-20 sm:py-24 lg:py-32;
+  }
+
+  .philosophy-block,
+  .founder-block {
+    @apply grid overflow-hidden rounded-[2rem] border border-coexistir-900/10 lg:grid-cols-2;
+  }
+
+  .philosophy-block {
+    @apply bg-sage-100;
+  }
+
+  .copy-panel,
+  .founder-copy,
+  .virtual-copy {
+    @apply flex flex-col justify-center p-7 sm:p-10 lg:p-14;
+  }
+
+  .copy-panel h2,
+  .founder-copy h2,
+  .virtual-copy h2,
+  .section-heading h2,
+  .resource-heading h2,
+  .contact-intro h2 {
+    @apply font-display font-normal tracking-[-0.025em] text-coexistir-900;
+  }
+
+  .copy-panel h2,
+  .founder-copy h2,
+  .virtual-copy h2,
+  .contact-intro h2 {
+    @apply text-4xl leading-[1.05] sm:text-5xl lg:text-6xl;
+  }
+
+  .prose-copy {
+    @apply mt-6 space-y-4 text-base leading-8 text-muted;
+  }
+
+  .care-note {
+    @apply mt-8 flex w-fit items-center gap-3 rounded-full bg-white/70 px-4 py-2 text-xs font-semibold text-coexistir-700;
+  }
+
+  .care-note > span {
+    @apply text-coexistir-active;
+  }
+
+  .calm-visual {
+    @apply relative m-0 min-h-[26rem] overflow-hidden bg-sage-400 lg:min-h-[38rem];
+  }
+
+  .calm-visual img {
+    @apply absolute inset-0 h-full w-full object-cover;
+  }
+
+  .founder-block {
+    @apply mt-8 bg-white shadow-card lg:mt-12;
+  }
+
+  .founder-portrait {
+    @apply relative m-0 min-h-[32rem] overflow-hidden bg-sage-100 lg:min-h-[42rem];
+  }
+
+  .founder-portrait img {
+    @apply absolute inset-0 h-full w-full object-cover object-[center_28%];
+  }
+
+  .founder-copy h3 {
+    @apply mt-6 font-display text-2xl font-normal text-coexistir-500;
+  }
+
+  .founder-prose {
+    @apply text-[0.95rem] leading-7;
+  }
+
+  .virtual-block {
+    @apply mt-8 grid overflow-hidden rounded-[2rem] bg-coexistir-900 text-white shadow-soft lg:mt-12 lg:grid-cols-[0.85fr_1.15fr];
+  }
+
+  .calm-visual-dark {
+    @apply min-h-[24rem] lg:min-h-[32rem];
+  }
+
+  .calm-visual-dark::after {
+    @apply absolute inset-0 bg-coexistir-900/30 content-[''];
+  }
+
+  .virtual-copy .section-kicker {
+    @apply text-sage-400;
+  }
+
+  .virtual-copy h2 {
+    @apply text-white;
+  }
+
+  .virtual-copy > p:not(.section-kicker) {
+    @apply mt-6 max-w-2xl text-base leading-8 text-sage-100;
+  }
+
+  .text-link {
+    @apply mt-8 inline-flex w-fit min-h-11 items-center gap-3 border-b border-sage-400 pb-1 text-sm font-semibold text-white transition hover:gap-5;
+  }
+
+  .services-section {
+    @apply bg-sage-100 py-20 sm:py-24 lg:py-32;
+  }
+
+  .section-heading {
+    @apply mb-10 grid items-end gap-6 lg:mb-14 lg:grid-cols-[1fr_0.6fr];
+  }
+
+  .section-heading h2,
+  .resource-heading h2 {
+    @apply max-w-[12ch] text-4xl leading-[1.02] sm:text-5xl lg:text-6xl;
+  }
+
+  .section-heading > p {
+    @apply max-w-lg text-base leading-7 text-coexistir-700;
+  }
+
+  .services-grid {
+    @apply grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .service-card {
+    @apply flex min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-coexistir-900/10 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft;
+  }
+
+  .service-visual {
+    @apply relative m-0 h-60 overflow-hidden bg-sage-400;
+  }
+
+  .service-rectangular .service-visual {
+    @apply rounded-none;
+  }
+
+  .service-capsule .service-visual {
+    @apply mx-6 mt-6 h-64 rounded-full;
+  }
+
+  .service-visual img {
+    @apply h-full w-full object-cover transition duration-500;
+  }
+
+  .service-card:hover .service-visual img {
+    @apply scale-105;
+  }
+
+  .service-number {
+    @apply absolute right-4 top-4 grid size-10 place-items-center rounded-full border border-white/40 bg-white/90 font-display text-sm text-coexistir-900 shadow-card backdrop-blur;
+  }
+
+  .service-body {
+    @apply flex flex-1 flex-col p-6 sm:p-7;
+  }
+
+  .service-card h3 {
+    @apply font-display text-2xl font-normal leading-tight text-coexistir-900;
+  }
+
+  .service-card p {
+    @apply mt-3 flex-1 text-sm leading-7 text-muted;
+  }
+
+  .service-whatsapp {
+    @apply mt-6 inline-flex min-h-11 w-fit items-center gap-3 rounded-full border border-coexistir-900/20 px-4 text-xs font-semibold text-coexistir-900 transition hover:border-coexistir-900 hover:bg-coexistir-900 hover:text-white;
+  }
+
+  .resources-section {
+    @apply bg-soft-white py-20 sm:py-24 lg:py-32;
+  }
+
+  .resource-heading {
+    @apply mb-10 lg:mb-14;
+  }
+
+  .resource-grid {
+    @apply grid gap-5 md:grid-cols-12;
+  }
+
+  .resource-card {
+    @apply relative min-h-[23rem] overflow-hidden rounded-[2rem] bg-coexistir-700 shadow-card md:col-span-6;
+  }
+
+  .resource-card:nth-child(1),
+  .resource-card:nth-child(4) {
+    @apply md:col-span-7;
+  }
+
+  .resource-card:nth-child(2),
+  .resource-card:nth-child(3) {
+    @apply md:col-span-5;
+  }
+
+  .resource-card > img {
+    @apply absolute inset-0 h-full w-full object-cover transition duration-700;
+  }
+
+  .resource-card:hover > img {
+    @apply scale-105;
+  }
+
+  .resource-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-ink/85 via-coexistir-900/25 to-transparent;
+  }
+
+  .resource-content {
+    @apply absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-8;
+  }
+
+  .resource-content > span {
+    @apply text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-sage-100;
+  }
+
+  .resource-content h3 {
+    @apply mt-3 max-w-[15ch] font-display text-3xl font-normal leading-none sm:text-4xl;
+  }
+
+  .resource-content a {
+    @apply mt-6 inline-flex min-h-11 items-center gap-3 rounded-full bg-white/90 px-4 text-xs font-semibold text-coexistir-900 backdrop-blur transition hover:bg-white;
+  }
+
+  .resource-content i {
+    @apply font-normal not-italic;
+  }
+
+  .contact-section {
+    @apply bg-sage-400 py-20 sm:py-24 lg:py-32;
+  }
+
+  .contact-container {
+    @apply grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16;
+  }
+
+  .contact-intro > p:not(.section-kicker, .privacy-note) {
+    @apply mt-6 max-w-lg text-base leading-8 text-coexistir-700;
+  }
+
+  .contact-details {
+    @apply mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2;
+  }
+
+  .contact-details a {
+    @apply rounded-2xl border border-coexistir-900/10 bg-white/55 p-4 text-sm font-semibold text-coexistir-900 backdrop-blur;
+  }
+
+  .contact-details a > span {
+    @apply mb-1 block text-[0.65rem] uppercase tracking-[0.16em] text-coexistir-700;
+  }
+
+  .privacy-note {
+    @apply mt-6 flex items-center gap-2 text-xs text-coexistir-700;
+  }
+
+  .privacy-note > span {
+    @apply grid size-5 place-items-center rounded-full bg-coexistir-900 text-[0.65rem] text-white;
+  }
+
+  .contact-form {
+    @apply rounded-[2rem] border border-white/70 bg-white p-6 shadow-soft sm:p-8 lg:p-10;
+  }
+
+  .form-heading {
+    @apply mb-7 border-b border-line pb-6;
+  }
+
+  .form-heading > span {
+    @apply font-display text-2xl text-coexistir-900;
+  }
+
+  .form-heading > p {
+    @apply mt-1 text-sm text-muted;
+  }
+
+  .contact-form > label:not(.human-check) {
+    @apply mb-5 grid gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-coexistir-700;
+  }
+
+  .contact-form input:not([type="checkbox"]) {
+    @apply h-13 w-full rounded-xl border border-line bg-soft-white px-4 text-base font-normal normal-case tracking-normal text-ink outline-none transition focus:border-coexistir-500 focus:ring-4 focus:ring-coexistir-500/10;
+  }
+
+  .human-check {
+    @apply relative my-6 flex w-fit cursor-pointer items-center gap-3 text-sm text-coexistir-900;
+  }
+
+  .human-check input {
+    @apply absolute opacity-0;
+  }
+
+  .check-box {
+    @apply grid size-6 place-items-center rounded-md border border-coexistir-500 bg-white text-transparent transition;
+  }
+
+  .human-check input:checked + .check-box {
+    @apply border-coexistir-900 bg-coexistir-900 text-white;
+  }
+
+  .contact-form > button {
+    @apply flex min-h-13 w-full cursor-pointer items-center justify-between rounded-full border-0 bg-coexistir-900 px-6 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coexistir-700;
+  }
+
+  .form-success {
+    @apply mt-4 rounded-xl bg-sage-100 p-3 text-sm text-coexistir-900;
+  }
+
+  .site-footer {
+    @apply bg-coexistir-900 py-14 text-white;
+  }
+
+  .footer-inner {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .footer-top {
+    @apply grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1fr_1fr_auto] lg:items-end;
+  }
+
+  .footer-brand {
+    @apply flex flex-col items-start;
+  }
+
+  .footer-brand strong {
+    @apply font-display text-4xl font-normal;
+  }
+
+  .footer-brand small {
+    @apply mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-sage-400;
+  }
+
+  .footer-top > p {
+    @apply max-w-sm text-sm leading-6 text-sage-100/75;
+  }
+
+  .footer-nav {
+    @apply flex flex-wrap gap-x-5 gap-y-2;
+  }
+
+  .footer-nav a {
+    @apply min-h-10 content-center text-xs font-semibold text-sage-100 transition hover:text-white;
+  }
+
+  .footer-bottom {
+    @apply flex flex-col gap-6 pt-7 text-xs text-sage-100/70 md:flex-row md:items-center;
+  }
+
+  .social-links {
+    @apply flex gap-2;
+  }
+
+  .social-links a {
+    @apply grid size-10 place-items-center rounded-full border border-icon-muted/60 text-[0.65rem] font-semibold uppercase text-icon-muted transition hover:border-icon-muted hover:bg-icon-muted hover:text-coexistir-900;
+  }
+
+  .footer-contact {
+    @apply flex flex-col gap-1 md:ml-auto md:text-right;
+  }
+
+  .footer-bottom > p {
+    @apply m-0 md:ml-6;
+  }
+
+  .floating-contact {
+    @apply fixed bottom-5 right-5 z-[60] grid size-14 cursor-pointer place-items-center overflow-hidden rounded-[50%_50%_50%_18%] border border-coexistir-900/10 bg-gradient-to-br from-[#4ee58a] via-[#25d366] to-[#128c4a] text-white shadow-[0_16px_38px_-12px_rgba(18,140,74,0.65)] ring-1 ring-coexistir-900/10 transition duration-300 before:pointer-events-none before:absolute before:inset-x-1 before:top-1 before:h-1/2 before:rounded-full before:bg-gradient-to-b before:from-white/30 before:to-transparent before:content-[''] hover:-translate-y-1 hover:scale-105 hover:shadow-[0_20px_45px_-12px_rgba(18,140,74,0.75)] sm:bottom-7 sm:right-7;
+  }
+
+  .floating-contact.is-active {
+    @apply scale-105 from-[#3fbc70] via-[#1da856] to-[#0f743c];
+  }
+
+  .whatsapp-glyph {
+    @apply relative z-10 grid size-8 place-items-center drop-shadow-sm;
+  }
+
+  .whatsapp-glyph svg {
+    @apply size-full;
+  }
+
+  .whatsapp-question-panel {
+    @apply fixed bottom-24 right-4 z-[59] w-[min(23rem,calc(100vw-2rem))] overflow-hidden rounded-[2rem_2rem_0.75rem_2rem] border border-coexistir-900/10 bg-gradient-to-br from-white/85 via-sage-100/75 to-sage-400/55 shadow-[0_28px_80px_-28px_rgba(34,68,31,0.48)] ring-1 ring-coexistir-900/10 backdrop-blur-2xl after:pointer-events-none after:absolute after:-right-16 after:-top-16 after:size-40 after:rounded-full after:bg-white/30 after:blur-2xl after:content-[''] sm:right-7;
+  }
+
+  .whatsapp-panel-close {
+    @apply absolute right-3 top-3 z-30 grid size-9 cursor-pointer place-items-center rounded-full border-0 bg-white/15 p-0 text-2xl leading-none text-white shadow-sm backdrop-blur-md transition hover:rotate-90 hover:bg-white/25;
+  }
+
+  .whatsapp-panel-header {
+    @apply relative z-20 flex items-center gap-3 border-b border-coexistir-900/20 bg-gradient-to-br from-coexistir-900/95 via-coexistir-700/90 to-coexistir-500/80 py-5 pl-5 pr-14 text-white backdrop-blur-xl;
+  }
+
+  .whatsapp-panel-mark {
+    @apply grid size-11 place-items-center rounded-2xl border border-coexistir-900/10 bg-gradient-to-br from-[#4ee58a] via-[#25d366] to-[#128c4a] p-2.5 text-white shadow-[0_10px_25px_-12px_rgba(18,140,74,0.85)];
+  }
+
+  .whatsapp-panel-mark svg {
+    @apply size-full;
+  }
+
+  .whatsapp-panel-header p {
+    @apply m-0 font-display text-lg;
+  }
+
+  .whatsapp-panel-header span:not(.whatsapp-panel-mark) {
+    @apply mt-0.5 block text-xs text-sage-400;
+  }
+
+  .whatsapp-question-panel h2 {
+    @apply relative z-20 mx-5 mb-2 mt-5 font-display text-2xl font-normal leading-tight text-coexistir-900;
+  }
+
+  .whatsapp-panel-description {
+    @apply relative z-20 mx-5 mb-4 text-xs leading-5 text-muted;
+  }
+
+  .whatsapp-question-list {
+    @apply relative z-20 grid gap-2 px-4;
+  }
+
+  .whatsapp-question-list a {
+    @apply flex min-h-12 items-center justify-between gap-4 rounded-2xl border border-coexistir-900/10 bg-white/55 px-4 py-2.5 text-xs font-semibold text-coexistir-700 shadow-[0_8px_22px_-18px_rgba(34,68,31,0.5)] backdrop-blur-md transition duration-300 hover:translate-x-1 hover:border-coexistir-500/30 hover:bg-white/80 hover:shadow-[0_12px_28px_-18px_rgba(34,68,31,0.6)];
+  }
+
+  .whatsapp-question-list i {
+    @apply text-xl font-normal not-italic text-[#128c4a];
+  }
+
+  .whatsapp-panel-hint {
+    @apply relative z-20 mx-5 mb-5 mt-4 rounded-xl border border-coexistir-900/10 bg-white/25 px-3 py-2 text-[0.68rem] leading-4 text-coexistir-700/70 backdrop-blur;
+  }
+}

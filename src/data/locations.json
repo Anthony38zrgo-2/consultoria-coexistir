@@ -1,0 +1,151 @@
+{
+  "brand": {
+    "name": "Coexistir",
+    "tagline": "Consultorio Psicológico Virtual",
+    "logo": "logo-coexistir.webp",
+    "headerLogo": "logo-header.webp",
+    "logoAlt": "Coexistir, Consultorio Psicológico Virtual"
+  },
+  "navigation": [
+    { "label": "Inicio", "href": "#inicio" },
+    { "label": "Nosotros", "href": "#nosotros" },
+    { "label": "Servicios", "href": "#servicios" },
+    { "label": "Recursos", "href": "#recursos" },
+    { "label": "Contacto", "href": "#contacto" }
+  ],
+  "home": {
+    "hero": {
+      "title": "Bienvenidos",
+      "headline": "Un espacio seguro para aprender a convivir contigo.",
+      "description": "Atención psicológica virtual, cercana y profesional para acompañarte a comprender lo que sientes y avanzar a tu propio ritmo.",
+      "primaryCta": "Quiero recibir orientación",
+      "secondaryCta": "Conocer Coexistir",
+      "highlights": [
+        "Atención 100 % virtual",
+        "Acompañamiento profesional",
+        "Un espacio confidencial"
+      ],
+      "image": "hero.jpeg",
+      "imageAlt": "Consulta psicológica virtual realizada mediante una videollamada"
+    }
+  },
+  "about": {
+    "philosophy": {
+      "title": "¿Qué es Coexistir?",
+      "subtitle": "Nuestra filosofía",
+      "paragraphs": [
+        "Coexistir nace de la idea de que la salud mental no consiste en eliminar lo que sentimos, pensamos o vivimos, sino en aprender a relacionarnos con ello de una manera más saludable y compasiva.",
+        "Creemos que las emociones difíciles y las crisis forman parte de la experiencia humana. Por eso, buscamos ofrecer un espacio donde cada persona pueda conocerse, comprenderse y aprender a convivir consigo misma con mayor equilibrio emocional."
+      ],
+      "image": "filosofia.jpeg",
+      "imageAlt": "Espacio preparado para una consulta psicológica virtual"
+    },
+    "founder": {
+      "title": "¿Quién está detrás de Coexistir?",
+      "subtitle": "Fundadora y promotora de Coexistir",
+      "name": "Alexia Daniela Ramírez Caja",
+      "paragraphs": [
+        "Hola, soy licenciada en Psicología por la Universidad Tecnológica del Perú.",
+        "Cuento con una especialización en Psicoterapia Cognitiva Conductual, certificada por la Universidad Nacional San Luis Gonzaga y el Instituto de Psicoterapia Cognitivo Conductual Beck.",
+        "Soy colegiada en el Colegio de Psicólogos CDR I Lima y Callao.",
+        "Es un gusto poder acompañarte en tu proceso."
+      ],
+      "image": "alexia-ramirez.jpg",
+      "imageAlt": "Alexia Daniela Ramírez Caja, fundadora de Coexistir"
+    },
+    "virtualCare": {
+      "title": "¿Por qué trabajamos de manera virtual?",
+      "description": "En Coexistir creemos que la terapia debe adaptarse a tu vida. Por eso, ofrecemos atención psicológica virtual, una modalidad que te permite acceder a un espacio cercano, seguro y flexible, sin importar dónde te encuentres.",
+      "image": "hero.jpeg",
+      "imageAlt": "Profesional de psicología brindando atención virtual"
+    }
+  },
+  "resources": {
+    "title": "Recursos para coexistir",
+    "items": [
+      {
+        "id": "importancia-salud-mental",
+        "title": "Importancia de la salud mental",
+        "buttonLabel": "Más aquí",
+        "image": "importancia-salud-mental.jpeg",
+        "imageAlt": "Charla sobre la importancia de la salud mental",
+        "visualSize": "large"
+      },
+      {
+        "id": "salud-mental-online",
+        "title": "Salud mental en línea",
+        "buttonLabel": "Más aquí",
+        "image": "filosofia.jpeg",
+        "imageAlt": "Espacio preparado para una consulta psicológica en línea",
+        "visualSize": "small"
+      },
+      {
+        "id": "psicoterapia",
+        "title": "Psicoterapia",
+        "buttonLabel": "Más aquí",
+        "image": "psicoterapia.jpg",
+        "imageAlt": "Sesión de psicoterapia realizada mediante videollamada",
+        "visualSize": "small"
+      },
+      {
+        "id": "primeros-auxilios-psicologicos",
+        "title": "Primeros auxilios psicológicos",
+        "buttonLabel": "Más aquí",
+        "image": "primeros-auxilios.jpg",
+        "imageAlt": "Ejercicio asociado a primeros auxilios psicológicos",
+        "visualSize": "large"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Estamos aquí para acompañarte en tu proceso. Aprende a convivir contigo.",
+    "fields": [
+      { "name": "firstName", "label": "Primer nombre", "type": "text", "required": true },
+      { "name": "lastName", "label": "Apellido", "type": "text", "required": true },
+      { "name": "email", "label": "Email", "type": "email", "required": true }
+    ],
+    "captchaLabel": "Soy humano",
+    "submitLabel": "Enviar"
+  },
+  "whatsapp": {
+    "countryCode": "51",
+    "panelTitle": "¿Cómo podemos orientarte?",
+    "panelDescription": "Elige una consulta frecuente y conversemos por WhatsApp.",
+    "defaultMessage": "Hola, quisiera recibir información sobre la atención psicológica virtual de Coexistir.",
+    "serviceButtonLabel": "Solicitar información",
+    "questions": [
+      {
+        "label": "Horarios disponibles",
+        "message": "Hola, quisiera conocer los horarios disponibles para recibir atención psicológica virtual."
+      },
+      {
+        "label": "Costo de las sesiones",
+        "message": "Hola, quisiera consultar el costo de las sesiones y los medios de pago disponibles."
+      },
+      {
+        "label": "Primera consulta",
+        "message": "Hola, quisiera saber cómo se desarrolla la primera consulta psicológica virtual."
+      },
+      {
+        "label": "Elegir un servicio",
+        "message": "Hola, necesito orientación para saber cuál de sus servicios psicológicos se adapta mejor a mi situación."
+      },
+      {
+        "label": "Duración y frecuencia",
+        "message": "Hola, quisiera saber cuánto dura cada sesión y con qué frecuencia suelen realizarse."
+      }
+    ]
+  },
+  "footer": {
+    "phone": "983373804",
+    "email": "coexistir.psico@gmail.com",
+    "copyright": "©2026 - Coexistir.psico",
+    "socialNetworks": [
+      { "platform": "TikTok", "url": "" },
+      { "platform": "Instagram", "url": "" },
+      { "platform": "Facebook", "url": "" },
+      { "platform": "Sitio web", "url": "" }
+    ]
+  }
+}
