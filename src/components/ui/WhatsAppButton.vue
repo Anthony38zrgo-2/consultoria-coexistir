@@ -2,8 +2,10 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { siteData } from "@/constants/company";
 import { useWhatsApp } from "@/composables/useWhatsApp";
+import professionalIllustration from "@/assets/images/profesional-salud-whatsapp.png";
 
 const panelOpen = ref(false);
+const customMessage = ref("");
 const { createWhatsAppUrl, whatsappUrl } = useWhatsApp();
 
 const handleFloatingButton = () => {
@@ -17,6 +19,17 @@ const handleFloatingButton = () => {
 
 const closePanel = () => {
   panelOpen.value = false;
+};
+
+const sendCustomMessage = () => {
+  const message = customMessage.value.trim();
+  if (!message) return;
+
+  window.open(
+    createWhatsAppUrl(`Hola, quisiera hacer la siguiente consulta: ${message}`),
+    "_blank",
+    "noopener,noreferrer",
+  );
 };
 
 const handleEscape = (event) => {
@@ -56,21 +69,53 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
           <span>En línea</span>
         </div>
       </div>
-      <h2 id="whatsapp-panel-title">{{ siteData.whatsapp.panelTitle }}</h2>
-      <p class="whatsapp-panel-description">{{ siteData.whatsapp.panelDescription }}</p>
-      <nav class="whatsapp-question-list" aria-label="Preguntas frecuentes por WhatsApp">
-        <a
-          v-for="question in siteData.whatsapp.questions"
-          :key="question.label"
-          :href="createWhatsAppUrl(question.message)"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>{{ question.label }}</span>
-          <i aria-hidden="true">›</i>
-        </a>
-      </nav>
-      <p class="whatsapp-panel-hint">Vuelve a pulsar el botón verde para escribir una consulta general.</p>
+      <div class="whatsapp-panel-body">
+        <figure class="whatsapp-panel-visual">
+          <img
+            :src="professionalIllustration"
+            alt="Ilustración de una profesional de salud mental"
+            width="1536"
+            height="2048"
+          />
+          <figcaption>Estamos para orientarte</figcaption>
+        </figure>
+
+        <div class="whatsapp-panel-content">
+          <h2 id="whatsapp-panel-title">{{ siteData.whatsapp.panelTitle }}</h2>
+          <p class="whatsapp-panel-description">{{ siteData.whatsapp.panelDescription }}</p>
+
+          <div class="whatsapp-question-list" aria-label="Preguntas frecuentes por WhatsApp">
+            <a
+              v-for="question in siteData.whatsapp.questions"
+              :key="question.label"
+              :href="createWhatsAppUrl(question.message)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>{{ question.label }}</span>
+              <i aria-hidden="true">›</i>
+            </a>
+          </div>
+
+          <form class="whatsapp-custom-message" @submit.prevent="sendCustomMessage">
+            <label for="whatsapp-custom-message">¿Tienes otra consulta?</label>
+            <textarea
+              id="whatsapp-custom-message"
+              v-model="customMessage"
+              maxlength="200"
+              rows="3"
+              placeholder="Escribe tu mensaje para enviarlo por WhatsApp"
+              required
+            ></textarea>
+            <div class="whatsapp-message-actions">
+              <span aria-live="polite">{{ customMessage.length }}/200</span>
+              <button type="submit" :disabled="!customMessage.trim()">
+                Enviar <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </aside>
   </Transition>
 

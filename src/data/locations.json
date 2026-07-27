@@ -116,23 +116,23 @@
     "serviceButtonLabel": "Solicitar información",
     "questions": [
       {
-        "label": "Horarios disponibles",
-        "message": "Hola, quisiera conocer los horarios disponibles para recibir atención psicológica virtual."
-      },
-      {
-        "label": "Costo de las sesiones",
-        "message": "Hola, quisiera consultar el costo de las sesiones y los medios de pago disponibles."
-      },
-      {
-        "label": "Primera consulta",
+        "label": "¿Cómo es la primera consulta?",
         "message": "Hola, quisiera saber cómo se desarrolla la primera consulta psicológica virtual."
       },
       {
-        "label": "Elegir un servicio",
+        "label": "¿Qué horarios tienen disponibles?",
+        "message": "Hola, quisiera conocer los horarios disponibles para recibir atención psicológica virtual."
+      },
+      {
+        "label": "¿Cuál es el costo y cómo puedo pagar?",
+        "message": "Hola, quisiera consultar el costo de las sesiones y los medios de pago disponibles."
+      },
+      {
+        "label": "¿Qué servicio es adecuado para mí?",
         "message": "Hola, necesito orientación para saber cuál de sus servicios psicológicos se adapta mejor a mi situación."
       },
       {
-        "label": "Duración y frecuencia",
+        "label": "¿Cuánto dura y con qué frecuencia se realiza?",
         "message": "Hola, quisiera saber cuánto dura cada sesión y con qué frecuencia suelen realizarse."
       }
     ]
