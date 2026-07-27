@@ -2,14 +2,15 @@
 import { siteData } from "@/constants/company";
 import { useWhatsApp } from "@/composables/useWhatsApp";
 
-const imageModules = import.meta.glob([
-  "../../assets/images/*.{jpg,jpeg}",
-  "!../../assets/images/logo.jpeg",
-], {
-  eager: true,
-  import: "default",
-});
-const heroImage = imageModules[`../../assets/images/${siteData.home.hero.image}`];
+const imageModules = import.meta.glob(
+  ["../../assets/images/*.{jpg,jpeg}", "!../../assets/images/logo.jpeg"],
+  {
+    eager: true,
+    import: "default",
+  },
+);
+const heroImage =
+  imageModules[`../../assets/images/${siteData.home.hero.image}`];
 const { whatsappUrl } = useWhatsApp();
 </script>
 
@@ -17,15 +18,21 @@ const { whatsappUrl } = useWhatsApp();
   <section id="inicio" class="hero" aria-labelledby="hero-title">
     <div class="hero-inner">
       <div class="hero-content">
-        <p class="hero-eyebrow"><span aria-hidden="true"></span>{{ siteData.home.hero.title }}</p>
         <h1 id="hero-title">{{ siteData.home.hero.headline }}</h1>
         <p class="hero-description">{{ siteData.home.hero.description }}</p>
         <div class="hero-actions">
-          <a :href="whatsappUrl" target="_blank" rel="noopener noreferrer" class="button-primary">
-            {{ siteData.home.hero.primaryCta }} <span aria-hidden="true">↗</span>
+          <a
+            :href="whatsappUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-primary"
+          >
+            {{ siteData.home.hero.primaryCta }}
+            <span aria-hidden="true">↗</span>
           </a>
           <a href="#nosotros" class="button-secondary">
-            {{ siteData.home.hero.secondaryCta }} <span aria-hidden="true">↓</span>
+            {{ siteData.home.hero.secondaryCta }}
+            <span aria-hidden="true">↓</span>
           </a>
         </div>
         <ul class="hero-highlights" aria-label="Características de la atención">
@@ -35,7 +42,11 @@ const { whatsappUrl } = useWhatsApp();
         </ul>
       </div>
       <figure class="hero-image-wrap">
-        <img :src="heroImage" :alt="siteData.home.hero.imageAlt" fetchpriority="high" />
+        <img
+          :src="heroImage"
+          :alt="siteData.home.hero.imageAlt"
+          fetchpriority="high"
+        />
         <figcaption>
           <span class="status-dot" aria-hidden="true"></span>
           Atención virtual desde donde estés
