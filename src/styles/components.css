@@ -392,7 +392,7 @@
   }
 
   .resource-card {
-    @apply relative min-h-[23rem] overflow-hidden rounded-[2rem] bg-coexistir-700 shadow-card md:col-span-6;
+    @apply relative min-h-[23rem] overflow-hidden rounded-[2rem] bg-coexistir-700 shadow-card md:col-span-6 lg:min-h-[27rem];
   }
 
   .resource-card:nth-child(1),
@@ -407,6 +407,22 @@
 
   .resource-card > img {
     @apply absolute inset-0 h-full w-full object-cover transition duration-700;
+  }
+
+  .resource-importancia-salud-mental > img {
+    object-position: center 10%;
+  }
+
+  .resource-salud-mental-online > img {
+    object-position: center 55%;
+  }
+
+  .resource-psicoterapia > img {
+    object-position: 42% center;
+  }
+
+  .resource-primeros-auxilios-psicologicos > img {
+    object-position: center 12%;
   }
 
   .resource-card:hover > img {

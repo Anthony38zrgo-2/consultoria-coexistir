@@ -23,7 +23,11 @@ const getImage = (imageName) => imageModules[`../../assets/images/${imageName}`]
           v-for="(resource, index) in siteData.resources.items"
           :key="resource.id"
           class="resource-card"
-          :class="[`resource-${resource.visualSize}`, `resource-tone-${index + 1}`]"
+          :class="[
+            `resource-${resource.visualSize}`,
+            `resource-${resource.id}`,
+            `resource-tone-${index + 1}`,
+          ]"
         >
           <img :src="getImage(resource.image)" :alt="resource.imageAlt" loading="lazy" />
           <div class="resource-overlay"></div>
