@@ -6,7 +6,7 @@
   "items": [
     {
       "id": "terapia-individual",
-      "title": "Terapia individual",
+      "title": "Terapia Individual",
       "description": "Te guiamos en la comprensión y abordaje de tus pensamientos, emociones, comportamientos o situaciones que te generen malestar.",
       "image": "terapia-individual.jpeg",
       "imageAlt": "Persona participando en una sesión de terapia individual en línea",
@@ -14,7 +14,7 @@
     },
     {
       "id": "terapia-pareja",
-      "title": "Terapia de pareja",
+      "title": "Terapia de Pareja",
       "description": "Los guiamos en la mejora de su relación, en la resolución de conflictos o en la toma de decisiones importantes.",
       "image": "terapia-pareja.jpeg",
       "imageAlt": "Pareja participando en un proceso de orientación psicológica",
@@ -22,7 +22,7 @@
     },
     {
       "id": "orientacion-vocacional",
-      "title": "Orientación vocacional",
+      "title": "Orientación Vocacional",
       "description": "Te guiamos para que identifiques tus intereses, habilidades y opciones educativas o profesionales.",
       "image": "orientacion-vocacional.jpeg",
       "imageAlt": "Persona realizando una orientación vocacional en línea",
@@ -30,7 +30,7 @@
     },
     {
       "id": "evaluacion-psicologica-integral",
-      "title": "Evaluación psicológica integral",
+      "title": "Evaluación Psicológica Integral",
       "description": "Realizamos evaluaciones psicológicas integrales y elaboramos informes psicológicos con objetividad, rigurosidad y respeto por los principios éticos de la profesión.",
       "image": "evaluacion-psicologica-integral.jpeg",
       "imageAlt": "Profesional realizando una evaluación psicológica integral",
@@ -38,7 +38,7 @@
     },
     {
       "id": "talleres-charlas",
-      "title": "Talleres y charlas",
+      "title": "Talleres y Charlas",
       "description": "Desarrollamos charlas y talleres orientados a la promoción, prevención y fortalecimiento de la salud mental, dirigidos a instituciones educativas, organizaciones, empresas y comunidades.",
       "image": "talleres-charlas.jpeg",
       "imageAlt": "Taller educativo relacionado con la salud mental",
@@ -46,7 +46,7 @@
     },
     {
       "id": "campanas-sociales",
-      "title": "Campañas sociales",
+      "title": "Campañas Sociales",
       "description": "Impulsamos campañas sociales de atención psicológica para acercar el cuidado de la salud mental a más personas, en alianza con municipalidades, organizaciones e instituciones.",
       "image": "campañas-sociales.jpeg",
       "imageAlt": "Campaña social relacionada con el cuidado de la salud mental",

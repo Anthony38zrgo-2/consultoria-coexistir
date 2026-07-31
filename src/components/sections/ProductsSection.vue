@@ -32,7 +32,7 @@ const getServiceMessage = (service) =>
           v-for="(service, index) in services.items"
           :key="service.id"
           class="service-card"
-          :class="`service-${service.visualVariant}`"
+          :class="[`service-${service.visualVariant}`, `service-${service.id}`]"
         >
           <figure class="service-visual">
             <img :src="getImage(service.image)" :alt="service.imageAlt" loading="lazy" />

@@ -311,7 +311,7 @@
   }
 
   .services-grid {
-    @apply grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+    @apply grid gap-5 md:grid-cols-2 lg:grid-cols-3;
   }
 
   .service-card {
@@ -332,6 +332,27 @@
 
   .service-visual img {
     @apply h-full w-full object-cover transition duration-500;
+  }
+
+  .service-terapia-individual .service-visual img {
+    object-position: center 35%;
+  }
+
+  .service-terapia-pareja .service-visual img {
+    object-position: center 45%;
+  }
+
+  .service-orientacion-vocacional .service-visual img {
+    object-position: center 40%;
+  }
+
+  .service-evaluacion-psicologica-integral .service-visual img,
+  .service-campanas-sociales .service-visual img {
+    object-position: center 30%;
+  }
+
+  .service-talleres-charlas .service-visual img {
+    object-position: center 42%;
   }
 
   .service-card:hover .service-visual img {
@@ -446,6 +467,10 @@
 
   .privacy-note > span {
     @apply grid size-5 place-items-center rounded-full bg-coexistir-900 text-[0.65rem] text-white;
+  }
+
+  .contact-slogan {
+    @apply m-0 text-center font-display text-3xl font-normal tracking-[-0.025em] text-coexistir-900 sm:text-4xl lg:col-span-2 lg:text-5xl;
   }
 
   .contact-form {

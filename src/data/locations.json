@@ -16,7 +16,7 @@
   "home": {
     "hero": {
       "title": "Bienvenidos",
-      "headline": "Un espacio seguro para aprender a convivir contigo.",
+      "headline": "Aprenda a convivir consigo mismo",
       "description": "Atención psicológica virtual, cercana y profesional para acompañarte a comprender lo que sientes y avanzar a tu propio ritmo.",
       "primaryCta": "Quiero recibir orientación",
       "secondaryCta": "Conocer Coexistir",
@@ -43,7 +43,7 @@
     "founder": {
       "title": "¿Quién está detrás de Coexistir?",
       "subtitle": "Fundadora y promotora de Coexistir",
-      "name": "Alexia Daniela Ramírez Caja",
+      "name": "Alexia Daniela Ramirez Caja",
       "paragraphs": [
         "Hola, soy licenciada en Psicología por la Universidad Tecnológica del Perú.",
         "Cuento con una especialización en Psicoterapia Cognitiva Conductual, certificada por la Universidad Nacional San Luis Gonzaga y el Instituto de Psicoterapia Cognitivo Conductual Beck.",
@@ -51,7 +51,7 @@
         "Es un gusto poder acompañarte en tu proceso."
       ],
       "image": "alexia-ramirez.jpg",
-      "imageAlt": "Alexia Daniela Ramírez Caja, fundadora de Coexistir"
+      "imageAlt": "Alexia Daniela Ramirez Caja, fundadora de Coexistir"
     },
     "virtualCare": {
       "title": "¿Por qué trabajamos de manera virtual?",

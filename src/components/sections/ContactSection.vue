@@ -45,6 +45,8 @@ const submitForm = () => {
         <button type="submit">{{ siteData.contact.submitLabel }} <span aria-hidden="true">↗</span></button>
         <p v-if="submitted" class="form-success" role="status">Gracias. Hemos recibido tus datos.</p>
       </form>
+
+      <p class="contact-slogan">{{ siteData.home.hero.headline }}</p>
     </div>
   </section>
 </template>
