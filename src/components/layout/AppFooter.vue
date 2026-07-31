@@ -20,7 +20,9 @@ import { siteData } from "@/constants/company";
           <a
             v-for="network in siteData.footer.socialNetworks"
             :key="network.platform"
-            :href="network.url || '#contacto'"
+            :href="network.url"
+            target="_blank"
+            rel="noopener noreferrer"
             :aria-label="network.platform"
           >{{ network.platform.slice(0, 2) }}</a>
         </nav>

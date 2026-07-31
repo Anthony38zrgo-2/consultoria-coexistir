@@ -142,10 +142,18 @@
     "email": "coexistir.psico@gmail.com",
     "copyright": "©2026 - Coexistir.psico",
     "socialNetworks": [
-      { "platform": "TikTok", "url": "" },
-      { "platform": "Instagram", "url": "" },
-      { "platform": "Facebook", "url": "" },
-      { "platform": "Sitio web", "url": "" }
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/share/1HfrSu8z9t/?mibextid=wwXIfr"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/coexistir.psico"
+      },
+      {
+        "platform": "TikTok",
+        "url": "https://www.tiktok.com/@coexistir.psico?_r=1&_t=ZS-98PT8Kg7xJa"
+      }
     ]
   }
 }

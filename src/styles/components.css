@@ -597,6 +597,22 @@
     @apply fixed bottom-5 right-5 z-[60] grid size-14 cursor-pointer place-items-center overflow-hidden rounded-[50%_50%_50%_18%] border border-coexistir-900/10 bg-gradient-to-br from-[#9aabb3] via-[#8ea297] to-[#535e4d] text-white shadow-[0_16px_38px_-12px_rgba(83,94,77,0.65)] ring-1 ring-coexistir-900/10 transition duration-300 before:pointer-events-none before:absolute before:inset-x-1 before:top-1 before:h-1/2 before:rounded-full before:bg-gradient-to-b before:from-white/30 before:to-transparent before:content-[''] hover:-translate-y-1 hover:scale-105 hover:shadow-[0_20px_45px_-12px_rgba(83,94,77,0.75)] sm:bottom-7 sm:right-7;
   }
 
+  .floating-socials {
+    @apply fixed bottom-[5.75rem] right-5 z-[60] flex flex-col items-center gap-2 transition duration-300 sm:bottom-[6.5rem] sm:right-7;
+  }
+
+  .floating-socials.is-hidden {
+    @apply pointer-events-none translate-y-3 opacity-0;
+  }
+
+  .floating-social-link {
+    @apply grid size-11 place-items-center rounded-full border border-white/30 bg-coexistir-900 p-3 text-white shadow-[0_12px_30px_-12px_rgba(83,94,77,0.8)] ring-1 ring-coexistir-900/10 transition duration-300 hover:-translate-y-0.5 hover:bg-coexistir-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-coexistir-active;
+  }
+
+  .floating-social-link svg {
+    @apply size-full;
+  }
+
   .floating-contact.is-active {
     @apply scale-105 from-[#879c92] via-[#718278] to-[#434c3e];
   }
@@ -1136,6 +1152,7 @@
   }
 
   .floating-contact,
+  .floating-social-link,
   .whatsapp-question-panel,
   .whatsapp-panel-mark {
     border-color: rgb(248 248 248 / 0.58);

@@ -1,5 +1,6 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import { siFacebook, siInstagram, siTiktok } from "simple-icons";
 import { siteData } from "@/constants/company";
 import { useWhatsApp } from "@/composables/useWhatsApp";
 import professionalIllustration from "@/assets/images/profesional-salud-whatsapp.png";
@@ -7,6 +8,16 @@ import professionalIllustration from "@/assets/images/profesional-salud-whatsapp
 const panelOpen = ref(false);
 const customMessage = ref("");
 const { createWhatsAppUrl, whatsappUrl } = useWhatsApp();
+const socialIcons = {
+  Facebook: siFacebook,
+  Instagram: siInstagram,
+  TikTok: siTiktok,
+};
+const floatingSocialNetworks = computed(() =>
+  siteData.footer.socialNetworks
+    .filter((network) => network.url && socialIcons[network.platform])
+    .map((network) => ({ ...network, icon: socialIcons[network.platform] })),
+);
 
 const handleFloatingButton = () => {
   if (!panelOpen.value) {
@@ -118,6 +129,27 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
       </div>
     </aside>
   </Transition>
+
+  <nav
+    class="floating-socials"
+    :class="{ 'is-hidden': panelOpen }"
+    aria-label="Redes sociales de Coexistir"
+  >
+    <a
+      v-for="network in floatingSocialNetworks"
+      :key="network.platform"
+      class="floating-social-link"
+      :href="network.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="`Visitar Coexistir en ${network.platform}`"
+      :title="network.platform"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path :d="network.icon.path" />
+      </svg>
+    </a>
+  </nav>
 
   <button
     type="button"
